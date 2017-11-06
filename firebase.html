@@ -1,0 +1,30 @@
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+<script>
+firebase.initializeApp({
+   apiKey: "AIzaSyA-R2U6lYN3IiQ0TQHZ-heL6d1Mv6pG7-0",
+    authDomain: "blazing-fire-5166.firebaseapp.com",
+    databaseURL: "https://blazing-fire-5166.firebaseio.com",
+    projectId: "blazing-fire-5166",
+    storageBucket: "blazing-fire-5166.appspot.com",
+    messagingSenderId: "573430446064"
+});
+// Initialize Cloud Firestore through Firebase
+var db = firebase.firestore();
+db.collection("users").add({
+    first: "Ada",
+    last: "Lovelace",
+    born: 1815
+})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
+   db.collection("users").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+    });
+});
+</script>
