@@ -57,6 +57,7 @@ firebase.initializeApp({
 });
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
+        window.fdb=db
 db.collection("users").add({
     first: "Ada",
     last: "Lovelace",
