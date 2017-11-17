@@ -4,7 +4,7 @@ const xpandForm ={
 oldName:'xpandForm',
       ns:'xpand.form',
 code:function(inp) {
-outputCounter++;
+
 searchObj={};
   if(inp.objToUse == undefined){
     inp.objToUse = 'curObj';
