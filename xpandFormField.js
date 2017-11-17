@@ -73,7 +73,7 @@ outputDiv.code(d);
 
     $('#id_-is').val(currentType.name);
 }}
-,{
+const funTemplate={
     fileOrigin:'xpandForm',
  name:'funTemplate',
         ns:'xpand.form',
