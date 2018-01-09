@@ -1,5 +1,4 @@
-export default () => {
-var eles=document.querySelectorAll(".criteria")
+export default (eles) => {
 console.log(eles)
 const hel= Array.from(eles).map((ele)=>{
 return Array.from(ele.children).map((field)=>{
