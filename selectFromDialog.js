@@ -1,4 +1,4 @@
-export default selectFromDialog(arr=[{name:"adfa"},{name:"ayyu"}]){
+export default function selectFromDialog(arr=[{name:"adfa"},{name:"ayyu"}]){
 	const tmpvar=document.createElement("dialog")
 	tmpvar.open=true
 	tmpvar.style='z-index:4;position: absolute;left: 50%;top: 50%;'
