@@ -1,0 +1,86 @@
+dhcpcd 
+
+lsblk
+
+fdisk /dev/sda
+
+mkfs.ext4
+
+useradd -m username --groups sudo
+sudo sh -c "echo 'username ALL=NOPASSWD: ALL' >> /etc/sudoers"
+passwd
+
+bashrc
+alias skul='tmux blabal'
+
+symlink
+
+fix a tmux.conf
+
+chmod +x
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt (we are now in the actual disk)
+
+pacman -U networkmanager
+
+systemctl enable NetworkManager
+
+pacman -U grub
+
+grub-install --target=i386-pc /dev/sda
+
+grup-mkconfig -o /boot/grub/grub.cfg
+
+
+mkdir externalToCompile (external_sh /usr/local)
+xmodmap ∼/myr/it/software/xmodmap/Xmodmap
+
+change /tmp//tmux-0/default/ or if its 1000
+
+NetworkManager and wpa_supplicant not activatet at the same time
+
+if no password is sest login with root and no pw required
+NetworkManager and wpa_supplicant s
+
+
+
+
+
+
+--
+prb is ressetted when switching away from e.g a browser prb for autocompletion outside of terminal
+
+/etc/netctl/wlo1_lenia
+Interface=wlo1
+Connection=wireless
+Security=wpa
+ESSID=lenia
+IP=dhcp
+Key=oileroileroil
+EOF
+
+netctl start wlo1_lenia
+
+pacstrap -i /mnt base
+genfstab -U -p /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+pacman -S openssh, grub-bios, linux-headers, linux-lts, linux-lts-headers, wpa_supplicant, wireless_tools, xorg,nvim,tmux,python2.7,ranger, browsh, yay, dilta, dwm
+
+vi /etc/locale.gen
+en_US.UTF-8 UTF-8
+locale-gen
+
+ln-s /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
+hwclock --systohc --utc
+systemctl enable sshd.service (starts openssh if started)
+passwd
+grup-install --target=i386i --recheck=/dev/sda
+cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+grub-mkconfig -o /boot/grub/grub.cfg
+exit
+umount /mnt/home
+umount /mnt
+reboot
+mirror list
