@@ -63,8 +63,17 @@ EOF
 
 how to enable nvim to find paths
 
+(if partitioning is done then move on)
+
+mkfs.ext4 /dev/sda3
+mount /dev/sda3 /mnt
 
 netctl start wlo1_lenia
+
+
+pacman -S tmux
+
+what mirrors should I have 
 
 pacstrap -i /mnt base
 genfstab -U -p /mnt >> /mnt/etc/fstab
