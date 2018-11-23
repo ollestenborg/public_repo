@@ -65,10 +65,31 @@ EOF
 
 how to enable nvim to find paths
 
+Partion the disk
+mkpart primary ext4 1MIB 100MIB
+set 1 boot on
+mkpart primary ext4 100MIB 7GIB
+mkpart primary linux-swap 7GIB 8GIB
+mkpart primary ext4 8GIB 100%
+
+create filesystem on each partition
+
+
 (if partitioning is done then move on)
 
-mkfs.ext4 /dev/sda3
-mount /dev/sda3 /mnt
+
+mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda2
+mkswap /dev/sda3
+
+swapon /dev/sda3
+
+mkdir -p /mnt/boot
+mkdir -p /mnt/home
+
+mount /dev/sda1 /mnt/boot
+mount /dev/sda2 /mnt
+mount /dev/sda4 /mnt/home
 
 netctl start wlo1_lenia
 
