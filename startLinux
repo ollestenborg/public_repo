@@ -65,6 +65,16 @@ EOF
 
 netctl start wlo1_lenia
 
+sudo killall dhcpcd
+sudo netctl disable wlo1_lenia
+sudo iwconfig
+ip link set down wlo1
+systemctl stop dhcpcd
+wifi-menu
+  no network found
+iwlist wlo1 scan
+pacman -S iw crd
+
 how to enable nvim to find paths
 
 ##Partion the disk
