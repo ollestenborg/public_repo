@@ -161,3 +161,14 @@ passwd sk
 #Server = http://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch
 #Server = https://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch
 #Server = https://mirror.osbeck.com/archlinux/$repo/os/$arch
+
+pacman -Syyu
+
+pacman -S xorg xorg-init
+
+git clone https://git.suckless.org/dwm
+git clone https://git.suckless.org/st
+
+
+
+~/.xinitrc 
