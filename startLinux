@@ -168,7 +168,13 @@ pacman -S xorg xorg-init
 
 git clone https://git.suckless.org/dwm
 git clone https://git.suckless.org/st
+echo "exec dwm" >> ~/.xinitrc 
+
+pacman -S python2
+pacman -S python2-pip
+pip2 install evdev
+sudo python2 myr/it/a/autoCompletion/evdev
+ 
+xmodmap /home/nobody4/myr/it/software/xmodmap/Xmodmap
 
 
-
-~/.xinitrc 
