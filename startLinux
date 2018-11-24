@@ -175,6 +175,9 @@ pacman -S python2-pip
 pip2 install evdev
 sudo python2 myr/it/a/autoCompletion/evdev
  
+git clone https://github.com/ollestenborg/myr.git 
+git clone https://github.com/ollestenborg/dotfiles.git 
+ 
 xmodmap /home/nobody4/myr/it/software/xmodmap/Xmodmap
 
 
