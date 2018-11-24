@@ -144,9 +144,6 @@ mirror list
 useradd -m -g users -G wheel,storage,power -s /bin/bash sk
 passwd sk
 
-echo "set clipboard+=unnamedplus" >> ~/.config/nvim/init.vim
-
-
 ##
 ## Arch Linux repository mirrorlist
 ## Generated on 2018-11-24
@@ -167,6 +164,8 @@ pacman -Syyu
 
 pacman -S xorg xorg-init xclip
 
+echo "set clipboard+=unnamedplus" >> ~/.config/nvim/init.vim
+
 git clone https://git.suckless.org/dwm
 git clone https://git.suckless.org/st
 echo "exec dwm" >> ~/.xinitrc 
@@ -178,6 +177,8 @@ sudo python2 myr/it/a/autoCompletion/evdev
  
 git clone https://github.com/ollestenborg/myr.git 
 git clone https://github.com/ollestenborg/dotfiles.git 
+
+
  
 xmodmap /home/nobody4/myr/it/software/xmodmap/Xmodmap
 
