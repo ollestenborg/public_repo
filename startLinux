@@ -67,6 +67,10 @@ netctl start wlo1_lenia
 
 sudo killall dhcpcd
 sudo netctl disable wlo1_lenia
+systemctl disable dhcpcd.service
+sudo natctl disable wlo1_lenia
+systemctl enable netctl-auto@wlo1.service
+
 sudo iwconfig
 ip link set down wlo1
 systemctl stop dhcpcd
